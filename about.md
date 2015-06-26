@@ -2,14 +2,18 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
 
-### More Information
+### This blog
 
-A place to include any other types of information that you'd like to include about yourself.
+This blog will contain interesting tidbits about remote sensing, python programming, GIS and related topics acquired during the course of my PhD thesis in the field of remote sensing.
 
-### Contact me
+### Me
+
+Apart from geography I'm passionate about anything on two wheels, own *n+1* bicycles, a motorbike, like to cook and enjoy good food and spoil my dog.
+
+### Find me
 
 [email@domain.com](mailto:email@domain.com)
