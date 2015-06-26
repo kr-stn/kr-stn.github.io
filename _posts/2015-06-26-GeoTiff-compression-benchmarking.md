@@ -4,7 +4,7 @@ layout: post
 title: GeoTiff compression benchmarking
 ---
 
-While collecting data for a time-series analysis I quickly started running out of diskspace. While HDDs are cheap nowadays they are still not free and I'd run out of space multiple times before I get a new one at work, so I had to ask: **What is the smallest, most efficient way to store all my Geotiff data?**
+While collecting data for a time-series analysis I quickly started running out of diskspace. While HDDs are cheap nowadays they are still not free and I'd run out of space multiple times before I get a new one at work, so I had to ask: **[What is the smallest, most efficient way to store all my Geotiff data?](http://gis.stackexchange.com/questions/132427/smallest-lossless-gdal-ready-image-format)**
 
 ## Size matters, but so does time
 
@@ -40,7 +40,4 @@ Just run it with a GeoTiff of your choice and compare the results:
 
 What to take away from that? Packbits is the *fastest*, but also offers the smallest compressions. Deflate is the *smallest*, slowest to write but faster to read than LZW. LZW *compresses twice as fast* as Deflate but is slower to decompress. In my case Deflate with horizontal differencing is the best choice, since it is the smallest and still has OK read times.
 
------------------------------------
-
-Interested in how the code works? Just read on.
-
+You should also consid changing your [GDAL ConfigOptions](http://trac.osgeo.org/gdal/wiki/ConfigOptions). Increasing *GDAL_CACHEMAX* decreased my read times by about 50%.
