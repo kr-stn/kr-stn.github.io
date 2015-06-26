@@ -19,9 +19,11 @@ Using compression decreases the amount of space you need for your data but it wi
 GDALs standard is to use no predictor for LZW and Deflate compression. Predictors store the difference in neighbouring values instead of the absolute values. If neighbouring pixels corellate this will reduce the file size even further. If not it might even increase it a bit. In other words – if your image contains smooth progression predictors might help, if it contains sudden jumps in values they might not. You can manually set the predictor to 2 for horizontal differencing or 3 for floating point. Since Landsat 8 data has no floating point values (like most satellite imagery) we will only check for horizontal differencing.
 
 You can use the compression methods with GDALs *creation options*
+
 	gdal_translate -of GTiff -co “COMPRESS=LZW” -co “PREDICTOR=2” -co “TILED=YES” uncompressed.tiff LZW-pred2-compressed.tiff
 
 In Python you can use the options as well:
+
 	gdal_translate -of GTiff -co “COMPRESS=LZW” -co “PREDICTOR=2” -co “TILED=YES” uncompressed.tiff LZW-pred2-compressed.tiff
 
 Not sure which algorithm will be the best for your data? Neither was I. I therefore wrote a small script that compares all of them to each other in regards to file size, write time and read time. This enables you to select the compression that best suits your data.
@@ -29,6 +31,7 @@ Not sure which algorithm will be the best for your data? Neither was I. I theref
 **[GeoTiff compression benchmark script](https://gist.githubusercontent.com/Fernerkundung/cc3b7f77ec4534754aba/raw/f230d0b86237eff21fc379265b24ce8f5f629c55/GTiff_compression_benchmark.py)**
 
 Just run it with a GeoTiff of your choice and compare the results:
+
 	python GTiff_compression_benchmark.py /path/to/some/Geo.tiff
 
 ![Icon]({{ site.baseurl }}/media/geotiff-benchmark-2.png)
