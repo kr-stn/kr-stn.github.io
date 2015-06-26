@@ -23,9 +23,11 @@ You can use the compression methods with GDALs *creation options*
 	gdal_translate -of GTiff -co “COMPRESS=LZW” -co “PREDICTOR=2” -co “TILED=YES” uncompressed.tiff LZW-pred2-compressed.tiff
 
 In Python you can use the options as well:
+
 ```python
 dstImg = driver.Create(dstName, srcImg.RasterXSize, srcImg.RasterYSize, 1, gdal.GDT_Int32, options = [ 'COMPRESS=DEFLATE' ])
 ```
+
 Not sure which algorithm will be the best for your data? Neither was I. I therefore wrote a small script that compares all of them to each other in regards to file size, write time and read time. This enables you to select the compression that best suits your data.
 
 **[GeoTiff compression benchmark script](https://gist.githubusercontent.com/Fernerkundung/cc3b7f77ec4534754aba/raw/f230d0b86237eff21fc379265b24ce8f5f629c55/GTiff_compression_benchmark.py)**
