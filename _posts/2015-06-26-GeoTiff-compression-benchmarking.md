@@ -34,7 +34,7 @@ Just run it with a GeoTiff of your choice and compare the results:
 
 	python GTiff_compression_benchmark.py /path/to/some/Geo.tiff
 
-![Icon]({{ site.baseurl }}/media/geotiff-benchmark-graph.png)
+![Icon]({{ site.baseurl }}/media/geotiff-benchmark-graph.PNG)
 
 What to take away from that? Packbits is the *fastest*, but also offers the smallest compressions. Deflate is the *smallest*, slowest to write but faster to read than LZW. LZW *compresses twice as fast* as Deflate but is slower to decompress. In my case Deflate with horizontal differencing is the best choice, since it is the smallest and still has OK read times.
 
