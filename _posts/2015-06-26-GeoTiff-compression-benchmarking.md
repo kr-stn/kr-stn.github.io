@@ -24,6 +24,17 @@ You can use the compression methods with GDALs *creation options*
 In Python you can use the options as well:
 	gdal_translate -of GTiff -co “COMPRESS=LZW” -co “PREDICTOR=2” -co “TILED=YES” uncompressed.tiff LZW-pred2-compressed.tiff
 
-Not sure which algorithm will be the best for your data? Neither was I. I therefore wrote a small script that compares all of them to each other in regards to file size, write time and read time. We can then select the algorithm that is ideal for each type of image.
+Not sure which algorithm will be the best for your data? Neither was I. I therefore wrote a small script that compares all of them to each other in regards to file size, write time and read time. This enables you to select the compression that best suits your data.
 
-![Icon]({{ site.baseurl }}/images/geotiff-benchmark-2.png)
+**[GeoTiff compression benchmark script](https://gist.githubusercontent.com/Fernerkundung/cc3b7f77ec4534754aba/raw/f230d0b86237eff21fc379265b24ce8f5f629c55/GTiff_compression_benchmark.py)**
+
+Just run it with a GeoTiff of your choice and compare the results:
+	python GTiff_compression_benchmark.py /path/to/some/Geo.tiff
+
+![Icon]({{ site.baseurl }}/media/geotiff-benchmark-2.png)
+
+What to take away from that? Packbits is the fastest, but also offers the smallest compressions. Deflate is the smallest, slowest to write but faster to read than LZW. LZW compresses twice as fast as Deflate but is slower to decompress. In my case Deflate with horizontal differencing is the best choice, since it is the smallest and still has OK read times.
+
+###
+
+Interested in how the code works? Just read on.
