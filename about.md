@@ -6,9 +6,10 @@ published: true
 ---
 
 
+
 ### This blog
 
-This blog will contain interesting tidbits about remote sensing, python programming, GIS and related topics acquired during the course of my PhD thesis in the field of remote sensing.
+This blog will contain interesting tidbits about remote sensing, python programming, GIS and related topics acquired during the course of my PhD thesis in the field of remote sensing. *Fernerkundung* is the German name for Remote Sesing - The scanning of the earth by satellite or high-flying aircraft in order to obtain information about it.
 
 ### Me
 
