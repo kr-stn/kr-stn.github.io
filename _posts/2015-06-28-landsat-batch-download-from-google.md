@@ -12,10 +12,12 @@ Google copies most parts of the Landsat archive to their servers to be accessed 
 
 ####requirements
 You will need Python and the Google Cloud Storage utilities **gsutil** to access the Cloud plattform. If you have Pip, included in Python >2.7.9, you can install it with:
+
 ```
 pip install gsutil
 ```
 With gsutil you will mainly need two commands - *list* and *download*.
+
 ```
 gsutil ls gs://URL # list
 gsutil cp gs://URL /local/folder # download (copy) to local folder
@@ -23,6 +25,7 @@ gsutil cp gs://URL /local/folder # download (copy) to local folder
 
 ####available data
 Most LM1, LM2, LM3, LT4, LM4, L5, LM5, L7 and L8 scenes are available. You can download the current scene list like so:
+
 ```
 gsutil cp -n gs://earthengine-public/landsat/scene_list.zip /landsat/
 ```
@@ -30,11 +33,13 @@ This zip contains a ~350MB text file containing the URLs to all available Landsa
 
 ####download a single dataset
 If you want to download a single dataset you’ll either have to copy the URL from the *scene_list* or construct it yourself. The structure is pretty straightforward.
+
 ```
 gs://earthengine-public/landsat/SENSOR/PATH/ROW/SCENE_ID.tar.bz
 ```
 
 The syntax to download LC81240532013107LGN01 which is located at Path/Row 124/053 would be:
+
 ```
 gsutil -cp -n gs://earthengine-public/landsat/L8/124/053/LC81240532013107LGN01.tar.bz /landsat/
 ```
@@ -42,6 +47,7 @@ gsutil -cp -n gs://earthengine-public/landsat/L8/124/053/LC81240532013107LGN01.t
 ####download a folder
 The nice thing about *gsutil* is that it allows file listing and therefore enables you to recursively download whole folders or even the complete archive if you have the space.
 Let’s say I want to download all available Landsat 8 and 7 scenes for a part of the Mekong Delta located at Path/Row 124/053. For this I’ll need to execute two commands.
+
 ```
 gsutil cp -n -r gs://earthengine-public/landsat/L8/124/053/ /landsat/mekong/L8
 gsutil cp -n -r gs://earthengine-public/landsat/L7/124/053/ /landsat/mekong/L7
