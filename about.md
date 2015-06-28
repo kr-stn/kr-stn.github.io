@@ -17,4 +17,4 @@ Apart from geography I'm passionate about anything on two wheels, own *n+1* bicy
 
 ### Find me
 
-[email@domain.com](mailto:email@domain.com)
+On one of the networks below.
