@@ -64,6 +64,7 @@ Fortunately Amazon also provides a scene list for all the data:
 **[http://landsat-pds.s3.amazonaws.com/scene_list.gz](http://landsat-pds.s3.amazonaws.com/scene_list.gz)**
 
 With this textfile you can select the scenes you want to download and download them with your script or download manager of choice.
+
 -----
 
 This scriptable, fast and open data availability also spurred some amazing open source applications like [landsat-util](https://github.com/developmentseed/landsat-util) and the [Libra Landsat viewer](https://developmentseed.org/blog/2015/01/22/announcing-libra/) (both by Developmentseed) as well as [Landsat Live](https://www.mapbox.com/blog/landsat-live-live/) (by Mapbox).
