@@ -17,7 +17,7 @@ Unfortunately they turned out to be too slow to be feasible, which lead to me [a
 ### Example dataset
 The example dataset reflects the input data rather well. Random Integers from -10000 to 10000 are like the NDVI dataset. There are areas where the complete z-axis is *NaN* (for example over water in the original data) and z-axis where only some values are *NaN*, just like after outlier removal along the time domain. There is high correlation along the time/z-axis. There might be some correlation in the x,y dimensions as well (Toplers Law) but this should not be employed for interpolation.
 
-'''python
+```python
  # import necessary libraries
  import numpy as np
  import pandas as pd
@@ -29,7 +29,6 @@ test_arr = np.random.randint(low=-10000, high=10000, size=(92, 480, 480))
 test_arr[1:90:7, :, :] = -32768  # NaN fill value in original data
 test_arr[2,:,:] = -32768
 test_arr[:, 1:479:6, 1:479:8] = -32768
-
 
 # show the example time-series at location (:,3,4)
 plt.plot(test_arr[:,3,4])
