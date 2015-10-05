@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Fast linear 1D interpolation
+title: Fast linear 1D interpolation with numba
 ---
 
 I am currently doing time-series analysis on MODIS derived vegetation index data. In order to get a reliable signal from the data outliers need to be removed and the resulting gaps interpolated/filled before further filtering/smoothing of the signal. The time-series for one tile, covering 10° by 10°, spans roughly 14 years with 46 images per year. Each image weighs in at around 70-100 Mb. If you are processing, say, Africa you are looking at roughly 2.3 *Terrabyte* of input data. Interpolation of such massive amounts of data begs teh question - **What is the fastest way to do it?**
@@ -87,34 +87,34 @@ def interpolate_numba(arr, no_data=-32768):
                     new_value = value
                 elif z == len(arr[:,0,0])-1:  # don't interpolate last value
                     new_value = value
-                    
+
                 elif value == no_data:  # interpolate
-                    
+
                     left = arr[z-1,y,x]
                     right = arr[z+1,y,x]
                     # look for valid neighbours
                     if left != no_data and right != no_data:  # left and right are valid
                         new_value = (left + right) / 2
-                    
+
                     elif left == no_data and z == 1:  # boundary condition left
                         new_value = value
                     elif right == no_data and z == len(arr[:,0,0])-2:  # boundary condition right
                         new_value = value
-                    
+
                     elif left == no_data and right != no_data:  # take second neighbour to the left
                         more_left = arr[z-2,y,x]
                         if more_left == no_data:
                             new_value = value
                         else:
                             new_value = (more_left + right) / 2
-                    
+
                     elif left != no_data and right == no_data:  # take second neighbour to the right
                         more_right = arr[z+2,y,x]
                         if more_right == no_data:
                             new_value = value
                         else:
                             new_value = (more_right + left) / 2
-                    
+
                     elif left == no_data and right == no_data:  # take second neighbour on both sides
                         more_left = arr[z-2,y,x]
                         more_right = arr[z+2,y,x]
