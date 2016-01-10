@@ -15,7 +15,7 @@ This blog is about remote sensing, Python programming, GIS and related topics I 
 
 ### Me
 
-Apart from geography I'm passionate about anything on two wheels, own n+1 bicycles, a motorbike, like to cook, enjoy good food and spoil my dog.
+Apart from data sciences and geography I'm passionate about anything on two wheels, own n+1 bicycles, a motorbike, like to cook, enjoy good food and spoil my dog.
 
 ### Find me
 
