@@ -13,7 +13,7 @@ There are three steps necessary before you can start downloading Sentinel data.
   - requires (py)curl, on Windows this is easiest acquired through [Conda](https://anaconda.org/anaconda/pycurl) or [Gohlke](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pycurl)
 3. Create a GeoJSON polygon of your area of interest.
 
-Once you've taken care of 1 and 2 head over to [Geojson.io](http://geojson.io/) (provided by the awesome folks over at [https://twitter.com/mapbox](https://twitter.com/mapbox)) and draw your Area-of-Interest.
+Once you've taken care of 1 and 2 head over to [Geojson.io](http://geojson.io/) (provided by the awesome folks over at [@mapbox](https://twitter.com/mapbox)) and draw your Area-of-Interest.
 
 Here is what I am looking at today - the surroundings of Lake Tonle Sap in Cambodia, a region rich in rice agriculture. Just draw a polygon around your search area and save it as Geojson.
 <script src="https://embed.github.com/view/geojson/fernerkundung/fernerkundung.github.io/master/media/tonle_sap.geojson"></script>
