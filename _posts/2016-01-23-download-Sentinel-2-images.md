@@ -27,7 +27,7 @@ If you just want to search for and download scenes the easiest way is through `s
 - `sentinel search` to search and download multiple scenes
 - `--sentinel2` limit the search to Sentinel-2 products
 - `-c 40` limit the maximum cloud cover to 40%, since this is a cloud prone area
-- `-s 20151010` starting date of our search
+- `-s 20151010` starting date of our search YYYY-MM-DD
 - `-f` to create a GeoJSON of the search result footprints
 - `-u "https://scihub.copernicus.eu/s2/"` to select the URL
 - `guest guest` username and password for the S2 hub
