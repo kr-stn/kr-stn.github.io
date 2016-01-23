@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Download Copernicus Sentinel-2 images
 ---
@@ -35,11 +35,53 @@ If you just want to search for and download scenes the easiest way is through `s
 
 The `-f` flag creates a GeoJSON `search_footprints.geojson` showing you which scenes fulfilled your search criteria, their respective download links and more metadata. This is a good starting point to get an overview of the available data.
 
-<script src="https://embed.github.com/view/geojson/fernerkundung/fernerkundung.github.io/master/media/search_footprints.geojson"></script>
+<script src="https://embed.github.com/view/geojson/fernerkundung/fernerkundung.github.io/master/media/search_footprints_tonle_sap.geojson"></script>
 
 To download all the scenes simply replace `-f` with `-d` and make sure you have enough diskspace, as most scenes are 5-7Gb each. It is also a good idea to use the provided MD5 checksum and verify the integrity of the downloaded files with the `--md5` flag.
 
 `sentinel search --sentinel2 -c 40 -s 20151010 -d --md5 -u "https://scihub.copernicus.eu/s2/" guest guest tonle_sap.geojson`
 
 ### Python API
-All this can also be done from within Python. For more examples on the download options and the Python functions head over to the [sentinelsat Github repository](https://github.com/ibamacsr/sentinelsat).
+All this can also be done from within Python.
+
+Set the connection details for the Scihub:
+```Python
+from sentinelsat.sentinel import SentinelAPI
+
+s2_api = SentinelAPI(
+    user="guest",
+    password="guest",
+    api_url="https://scihub.copernicus.eu/s2/"
+)
+```
+
+Query products in our AOI.
+```Python
+from sentinelsat.sentinel import get_coordinates
+
+s2_api.query(
+    area=get_coordinates("tonle_sap.geojson"),
+    initial_date="20151010",
+    platformname="Sentinel-2",
+    cloudcoverpercentage="[0 TO 40]"
+)
+```
+
+List all products in the query.
+```Python
+print(s2_api.get_products())
+```
+
+Geojson feature collection of the footprints of the queried images.
+```Python
+from sentinelsat.sentinel import get_footprints
+
+footprints = s2_api.get_footprints()
+```
+
+Download with MD5 checksum test.
+```Python
+s2_api.download_all(path=".", checksum=True)
+```
+
+For more examples on the download options and the Python functions head over to the [sentinelsat Github repository](https://github.com/ibamacsr/sentinelsat).
