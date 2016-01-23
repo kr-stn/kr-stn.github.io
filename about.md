@@ -19,4 +19,8 @@ This blog is about Remote Sensing, Python programming, GIS and related topics I 
 
 ### Contact
 
-Find me on one of the networks below.
+[GitHub](https://github.com/Fernerkundung)
+[Twitter](https://twitter.com/Fernerkundung)
+[StackExchange](http://stackexchange.com/users/5185724/kersten)
+[ResearchGate](https://www.researchgate.net/profile/Kersten_Clauss)
+[LinkedIn](https://www.linkedin.com/in/kerstenclauss)
