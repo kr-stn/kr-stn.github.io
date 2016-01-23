@@ -89,6 +89,7 @@ footprints = s2_api.get_footprints()
 ```
 
 Download with MD5 checksum test.
+
 ```Python
 s2_api.download_all(path=".", checksum=True)
 ```
