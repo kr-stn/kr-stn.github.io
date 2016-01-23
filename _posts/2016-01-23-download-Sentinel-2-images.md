@@ -23,7 +23,9 @@ Here is what I am looking at today - the surroundings of Lake Tonle Sap in Cambo
 
 If you just want to search for and download scenes the easiest way is through `sentinelsat`s command line interface. From the command line this is what I would execute to get an overview of the available data for Lake Tonle Sap.
 
-`sentinel search --sentinel2 -c 40 -s 20151010 -f -u "https://scihub.copernicus.eu/s2/" guest guest tonle_sap.geojson`
+```bash
+sentinel search --sentinel2 -c 40 -s 20151010 -f -u "https://scihub.copernicus.eu/s2/" guest guest tonle_sap.geojson
+```
 
 - `sentinel search` to search and download multiple scenes
 - `--sentinel2` limit the search to Sentinel-2 products
@@ -40,7 +42,9 @@ The `-f` flag creates a GeoJSON `search_footprints.geojson` showing you which sc
 
 To download all the scenes simply replace `-f` with `-d` and make sure you have enough diskspace, as most scenes are 5-7Gb each. It is also a good idea to use the provided MD5 checksum and verify the integrity of the downloaded files with the `--md5` flag.
 
-`sentinel search --sentinel2 -c 40 -s 20151010 -d --md5 -u "https://scihub.copernicus.eu/s2/" guest guest tonle_sap.geojson`
+```bash
+sentinel search --sentinel2 -c 40 -s 20151010 -d --md5 -u "https://scihub.copernicus.eu/s2/" guest guest tonle_sap.geojson
+```
 
 ### Python API
 All this can also be done from within Python.
