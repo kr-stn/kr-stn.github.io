@@ -46,10 +46,11 @@ To download all the scenes simply replace `-f` with `-d` and make sure you have 
 sentinel search --sentinel2 -c 40 -s 20151010 -d --md5 -u "https://scihub.copernicus.eu/s2/" guest guest tonle_sap.geojson
 ```
 
-### Python API
+## Python API
 All this can also be done from within Python.
 
 Set the connection details for the Scihub:
+
 ```Python
 from sentinelsat.sentinel import SentinelAPI
 
@@ -61,6 +62,7 @@ s2_api = SentinelAPI(
 ```
 
 Query products in our AOI.
+
 ```Python
 from sentinelsat.sentinel import get_coordinates
 
@@ -73,11 +75,13 @@ s2_api.query(
 ```
 
 List all products in the query.
+
 ```Python
 print(s2_api.get_products())
 ```
 
 Geojson feature collection of the footprints of the queried images.
+
 ```Python
 from sentinelsat.sentinel import get_footprints
 
