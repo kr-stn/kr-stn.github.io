@@ -28,3 +28,5 @@ This blog is about Remote Sensing, Python programming, (Spatial) Data Science, G
 [ResearchGate](https://www.researchgate.net/profile/Kersten_Clauss)
 
 [LinkedIn](https://www.linkedin.com/in/kerstenclauss)
+
+[Email](mailto:kersten@krstn.eu)
