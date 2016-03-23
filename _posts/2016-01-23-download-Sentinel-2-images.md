@@ -51,7 +51,7 @@ All this can also be done from within Python.
 
 Set the connection details for the Scihub:
 
-```Python
+```python
 from sentinelsat.sentinel import SentinelAPI
 
 s2_api = SentinelAPI(
