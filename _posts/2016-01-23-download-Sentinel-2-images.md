@@ -63,7 +63,7 @@ s2_api = SentinelAPI(
 
 Query products in our AOI.
 
-```Python
+```python
 from sentinelsat.sentinel import get_coordinates
 
 s2_api.query(
@@ -76,13 +76,13 @@ s2_api.query(
 
 List all products in the query.
 
-```Python
+```python
 print(s2_api.get_products())
 ```
 
 Geojson feature collection of the footprints of the queried images.
 
-```Python
+```python
 from sentinelsat.sentinel import get_footprints
 
 footprints = s2_api.get_footprints()
@@ -90,7 +90,7 @@ footprints = s2_api.get_footprints()
 
 Download with MD5 checksum test.
 
-```Python
+```python
 s2_api.download_all(path=".", checksum=True)
 ```
 
