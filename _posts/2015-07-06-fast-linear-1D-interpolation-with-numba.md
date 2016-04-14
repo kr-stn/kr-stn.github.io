@@ -6,7 +6,7 @@ title: Fast linear 1D interpolation with numba
 
 I am currently doing time-series analysis on MODIS derived vegetation index data. In order to get a reliable signal from the data outliers need to be removed and the resulting gaps interpolated/filled before further filtering/smoothing of the signal. The time-series for one tile, covering 10° by 10°, spans roughly 14 years with 46 images per year. Each image weighs in at around 70-100 Mb. If you are processing, say, Africa you are looking at roughly 2.3 *Terrabyte* of input data. Interpolation of such massive amounts of data begs teh question - **What is the fastest way to do it?**
 
-##The Question: What is the fastest way to interpolate such a massive dataset?
+## The Question: What is the fastest way to interpolate such a massive dataset?
 
 Each time-series needs to be interpolated in the time domain. Since every tile consists of 4800 by 4800 pixels this means the task is to interpolate 23040000 1D numpy arrays containing 644 evenly spaced data points.
 
@@ -37,7 +37,7 @@ plt.plot(test_arr[:,3,4])
 ![png]({{ site.baseurl }}/media/output_6_1.png)
 
 
-###Scipy.interp1d interpolation
+### Scipy.interp1d interpolation
 
 Uitilizes *scipy.signal.interp1d* wrapper in *pandas*. This has the advantage of interpolating over a consecutive number of *NaN* up to a given limit with an interpolation method of choice.
 It is very convenient **but** it is rather slow.
@@ -59,7 +59,7 @@ def interpolate_nan(arr, method="linear", limit=3):
 
 While this is very convenient it is *way* too slow for my purposes. Interpolation of my input data would require upwards of 3 weeks. I started looking for ways to speed this up. Since numpy has no fast 1D interpolation function and writing C code or learn Cython would also cost me quite some time I turned towards [numba](http://numba.pydata.org/).
 
-###1D interpolation with numba
+### 1D interpolation with numba
 
 The idea is to loop through all 644x4800x4800 pixels and replace it with the mean of it's neighbours in the z-axis. This kind of loop would be horribly slow in pure Python. *Numba* compiles this function once and thus speeds up the loop drastically.
 
@@ -130,7 +130,7 @@ def interpolate_numba(arr, no_data=-32768):
     return result
 ```
 
-###Comparing performance
+### Comparing performance
 
 Testing the performance of both functions on the example dataset shows that the numba function is more than **20 times faster**. While it is less convenient than SciPy's function it is easy to write a function and use numbas LLVM magic to reach speeds close to native C Code without the hassle of having to actually learn C.
 
