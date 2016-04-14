@@ -140,4 +140,4 @@ Testing the performance of both functions on the example dataset shows that the 
 
 %timeit interpolate_numba(test_arr)
 1 loops, best of 3: 558 ms per loop
- ```
+```
