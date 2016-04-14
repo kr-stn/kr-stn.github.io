@@ -6,11 +6,11 @@ title: Landsat batch download from Google and Amazon
 
 Landsat is the work horse for a lot of remote sensing applications with it's open data policy, global data vailability and long spanning acquisition time-series. The [USGS Bulk Downloader](http://earthexplorer.usgs.gov/bulk/) however is clunky, depends on special ports being open on your network an can not be scripted to suit needs like automatic ingestion of new acquired Landsat-8 scenes. Fortunately [Google](http://www.google.com/earth/outreach/tools/earthengine.html) and [Amazon](http://aws.amazon.com/de/public-data-sets/landsat/) provide mirrors to a lot of the Landsat datasets which can be used for scripted bulk downloading.
 
-##Landsat download from Google
+## Landsat download from Google
 
 Google copies most parts of the Landsat archive to their servers to be accessed by its EarthEngine. This data can be processed in the [EarthEngine](https://earthengine.google.org/#intro) but also downloaded through the Google Cloud Storage platform.
 
-####requirements
+#### requirements
 You will need Python and the Google Cloud Storage utilities **gsutil** to access the Cloud plattform. If you have Pip, included in Python >2.7.9, you can install it with:
 
 ```
@@ -23,7 +23,7 @@ gsutil ls gs://URL # list
 gsutil cp gs://URL /local/folder # download (copy) to local folder
 ```
 
-####available data
+#### available data
 Most LM1, LM2, LM3, LT4, LM4, L5, LM5, L7 and L8 scenes are available. You can download the current scene list like so:
 
 ```
@@ -44,7 +44,7 @@ The syntax to download LC81240532013107LGN01 which is located at Path/Row 124/05
 gsutil -cp -n gs://earthengine-public/landsat/L8/124/053/LC81240532013107LGN01.tar.bz /landsat/
 ```
 
-####download a folder
+#### download a folder
 The nice thing about *gsutil* is that it allows file listing and therefore enables you to recursively download whole folders or even the complete archive if you have the space.
 Let’s say I want to download all available Landsat 8 and 7 scenes for a part of the Mekong Delta located at Path/Row 124/053. For this I’ll need to execute two commands.
 
