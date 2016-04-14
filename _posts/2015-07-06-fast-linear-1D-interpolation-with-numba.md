@@ -6,7 +6,7 @@ title: Fast linear 1D interpolation with numba
 
 I am currently doing time-series analysis on MODIS derived vegetation index data. In order to get a reliable signal from the data outliers need to be removed and the resulting gaps interpolated/filled before further filtering/smoothing of the signal. The time-series for one tile, covering 10° by 10°, spans roughly 14 years with 46 images per year. Each image weighs in at around 70-100 Mb. If you are processing, say, Africa you are looking at roughly 2.3 *Terrabyte* of input data. Interpolation of such massive amounts of data begs teh question - **What is the fastest way to do it?**
 
-## The Question: What is the fastest way to interpolate such a massive dataset?
+### The Question: What is the fastest way to interpolate such a massive dataset?
 
 Each time-series needs to be interpolated in the time domain. Since every tile consists of 4800 by 4800 pixels this means the task is to interpolate 23040000 1D numpy arrays containing 644 evenly spaced data points.
 
