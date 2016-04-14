@@ -31,7 +31,7 @@ gsutil cp -n gs://earthengine-public/landsat/scene_list.zip /landsat/
 ```
 This zip contains a ~350MB text file containing the URLs to all available Landsat scenes which can be fed into the download manager of your choice (I prefer a combination of *regex* filtering and *curl*).
 
-####download a single dataset
+#### download a single dataset
 If you want to download a single dataset you’ll either have to copy the URL from the *scene_list* or construct it yourself. The structure is pretty straightforward.
 
 ```
