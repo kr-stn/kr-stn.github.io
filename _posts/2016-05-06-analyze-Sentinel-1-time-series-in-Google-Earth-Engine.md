@@ -11,7 +11,7 @@ product you need to download gigabytes of data, pre-process it, write the code
 that calculates your prototype product and save it somewhere.
 Oftentimes you'll end up spending more time on downloading and pre-processing
 than the actual prototyping and calculation. More often than not I discarded
-ideas because I had no type to test them. **Today I'll show an example of how
+ideas because I had no time to test them. **Today I'll show an example of how
 Google's Earth Engine can be used to put the *rapid* back into rapid
 prototyping for remote sensing.**
 
@@ -35,7 +35,7 @@ flooded paddy fields.
 Developing a prototype to test this idea on my local PC would mean I needed to
 download 243 Gb of satellite images, pre-process them to sigma0 (the backscatter
 intensity) and write code that calculates the amplitude at each pixel's location
-and finally apply my threshold. We're looking at weeks to months to test my idea.
+and finally apply my threshold. We're looking at weeks of work to test my idea.
 In order to develop a *rapid* prototype I turned to Google's Earth Engine.
 
 ## Earth Engine
@@ -51,7 +51,7 @@ including the complete Landsat archive and both Sentinel archives. New Landsat a
 Sentinel data is also ingested shortly after publication. The processing
 framework is exposed with a [well documented](https://developers.google.com/earth-engine/)
 API that can be accessed with JavaScript or Python. The cherry on top is an
-online [code editor](https://code.earthengine.google.com/) that supports stores and versions all your code. All that is distributed for the low price of free - you just need to register for a free account.
+online [code editor](https://code.earthengine.google.com/) that stores and versions all your code. All that is distributed for the low price of free - you just need to register for a free account.
 
 ## Sentinel-1 time-series
 
@@ -77,7 +77,7 @@ var vhDescending = vh.filter(ee.Filter.eq('orbitProperties_pass', 'DESCENDING'))
 var vhDesc2015 = vhDescending.filterDate(ee.Date('2015-01-01'), ee.Date('2015-12-31'));
 ```
 
-The image collection spans the globe, or the parts that Sentinel-1 regulary covers. I am only interested in the Mekong Delta for now, so I'll clip the image collection with a polygon of my Region-of-Interest.
+The image collection spans the globe, or at least the parts that Sentinel-1 regularly covers. I am only interested in the Mekong Delta for now, so I'll clip the image collection with a polygon of my Region-of-Interest.
 
 ```javascript
 var roi = ee.Geometry.Polygon(
@@ -100,15 +100,21 @@ var p10 = s1_mkd.s1_mkd.reduce(ee.Reducer.percentile([10]));
 var s1_mkd_perc_diff = p90.subtract(p10);
 ```
 
-This type of calculation of features over a time-series is blazingly fast and it only takes seconds to visualize the results for this. Areas with a high amplitude are bright and areas with low amplitude are low. Near the city of Rach Gia we can already see some structures from this amplitude image. Some (presumeably) forest and urban areas in dark color, some very bright areas, which might be rice fields or other agriculture.
+This type of calculation of features over a time-series is blazingly fast and it only takes seconds to visualize the results for this. Areas with a high amplitude are bright and areas with low amplitude are dark. Near the city of Rach Gia we can already see some structures from this amplitude image. Some (presumeably) forest and urban areas in dark color, some very bright areas, which might be rice fields or other agriculture.
 
 ```javascript
-Map.addLayer(s1_mkd_perc_diff, {min: [2], max: [17]}, 'p90-p10 2015', 1)
+Map.addLayer(s1_mkd_perc_diff, {min: [2], max: [17]}, 'p90-p10 2015', 1);
 ```
 
 ![Rach Gia Amplitude]({{ site.baseurl }}/media/Rach-Gia-amplitude-2015.jpg)
 
 Following the initial idea, that agriculture has a higher backscatter amplitude than other land cover, I'll mask all areas with a backscatter amplitude larger than 7.5 dB.
+
+```javascript
+var amplitude_mask = s1_mkd_perc_diff.gt(7.5);
+var amplitude_mask = amplitude_mask.updateMask(amplitude_mask);
+Map.addLayer(amplitude_mask, {palette: 'FF0000'}, 'amplitude_mask', 1);
+```
 
 ![Rach Gia Mask]({{ site.baseurl }}/media/Rach-Gia-amplitude-mask.PNG)
 
