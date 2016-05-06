@@ -1,7 +1,7 @@
 ---
 published: false
 layout: post
-title: Analyze Sentinel-1 time-series in Google Earth Engine
+title: Prototyping time-series analysis with Google Earth Engine
 ---
 The sheer size and amount of openly available satellite images makes
 developing prototypes rather cumbersome. To get from an idea to a prototype
@@ -38,5 +38,5 @@ In order to develop a *rapid* prototype I turned to Google's Earth Engine.
 - Code for the pre-processing
 
 ## Result
-- Show the Result
+- Show the Result (including image)
 - Discuss limitations of the idea (and Earth Engine)
