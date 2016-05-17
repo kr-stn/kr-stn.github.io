@@ -95,8 +95,8 @@ var s1_mkd = vhDesc2015.filterBounds(roi);
 Next I'll calculate the amplitude. Since I am not sure if the data contains outliers I'll use the 90th and 10th percentile.
 
 ```javascript
-var p90 = s1_mkd.s1_mkd.reduce(ee.Reducer.percentile([90]));
-var p10 = s1_mkd.s1_mkd.reduce(ee.Reducer.percentile([10]));
+var p90 = s1_mkd.reduce(ee.Reducer.percentile([90]));
+var p10 = s1_mkd.reduce(ee.Reducer.percentile([10]));
 var s1_mkd_perc_diff = p90.subtract(p10);
 ```
 
