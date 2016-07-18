@@ -41,7 +41,7 @@ gs://earthengine-public/landsat/SENSOR/PATH/ROW/SCENE_ID.tar.bz
 The syntax to download LC81240532013107LGN01 which is located at Path/Row 124/053 would be:
 
 ```
-gsutil -cp -n gs://earthengine-public/landsat/L8/124/053/LC81240532013107LGN01.tar.bz /landsat/
+gsutil cp -n gs://earthengine-public/landsat/L8/124/053/LC81240532013107LGN01.tar.bz /landsat/
 ```
 
 #### download a folder
