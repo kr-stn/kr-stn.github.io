@@ -19,8 +19,7 @@ Download can be either done through [EarthExplorer](http://earthexplorer.usgs.go
 
 This example will use four tiles placed in the Hanzhong Plain, China.
 
-```python
-%%cmd
+```bash
 # download
 curl -O http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/N32E106.SRTMGL1.hgt.zip
 curl -O http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/N32E107.SRTMGL1.hgt.zip
@@ -28,8 +27,7 @@ curl -O http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/N33E106.SRTMGL1.h
 curl -O http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/N33E107.SRTMGL1.hgt.zip
 ```
 
-```python
-%%bash
+```bash
 # unzip and remove
 unzip /data/China/slope_relief/\*.zip -d /data/China/slope_relief/
 rm /data/China/slope_relief/\*.zip
@@ -40,8 +38,7 @@ rm /data/China/slope_relief/\*.zip
 In a next step we merge the .hgt DEMs into a single GeoTiff. This step could also be used for warping into a different projection, resolution, etc.
 
 
-```python
-%%bash
+```bash
 # merge
 cd /data/China/slope_relief/
 gdal_merge.py -o hanzhong-dem.tif *.hgt
@@ -52,8 +49,7 @@ gdal_merge.py -o hanzhong-dem.tif *.hgt
 For this we will use `gdaldem` with the additional `-s` parameter to account for the difference in horizontal units (degree) and vertical units (meters). Also we want to compute at raster edges and near no_data values and therefore invoke `-compute_edges`. If you want the slope in percent instead of degree use `-p`.
 
 
-```python
-%%bash
+```bash
 cd /data/China/slope_relief/
 gdaldem slope -s 111120 -compute_edges hanzhong-dem.tif hanzhong-slope.tif
 ```
@@ -70,8 +66,7 @@ Therefore prepare a `slope_color.txt` with the content:
 ```
 
 
-```python
-%%bash
+```bash
 cd /data/China/slope_relief/
 gdaldem color-relief hanzhong-slope.tif slope_color.txt hanzhong-slope-relief.tif
 ```
