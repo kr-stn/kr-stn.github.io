@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Beautiful Map Backgrounds - Slope Hillshades with a SRTM DEM
+title: Beautiful Map Backgrounds - Slope Hillshades
 ---
 In remote sensing you often have to present classification results as maps and need a nice, unobtrusive
 background that gives the viewer an idea where everything is located without being as distracting as a
