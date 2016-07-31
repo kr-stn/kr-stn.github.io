@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Beautiful Map Backgrounds - Slope Hillshades
 ---
-In remote sensing you often have to present classification results as maps and need a nice, unobtrusive
+In the field of remote sensing you often have to present classification results as maps and need a nice, unobtrusive
 background that gives the viewer an idea where everything is located without being as distracting as a
 RGB satellite image. A nice choice for this is a grey hillshading or slope relief background that adds
 some texture information to your map by using a Digital Elevation Model with the same or higher resolution
