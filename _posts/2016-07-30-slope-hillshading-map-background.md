@@ -6,8 +6,7 @@ title: Beautiful Map Backgrounds - Slope Hillshades
 In the field of remote sensing you often have to present classification results as maps and need a nice, unobtrusive
 background that gives the viewer an idea where everything is located without being as distracting as a
 RGB satellite image. A nice choice for this is a grey hillshading or slope relief background that adds
-some texture information to your map by using a Digital Elevation Model with the same or higher resolution
-than the results you want to show.
+some texture information to your map by using a Digital Elevation Model.
 
 ![Hanzhong Slope Relief]({{ site.baseurl }}/media/slope-example.PNG)
 
@@ -65,6 +64,7 @@ Therefore prepare a `slope_color.txt` with the content:
 90 0 0 0
 ```
 
+And finally create the finished result.
 
 ```bash
 cd /data/China/slope_relief/
