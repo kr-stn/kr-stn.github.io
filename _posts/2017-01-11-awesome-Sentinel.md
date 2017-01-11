@@ -42,7 +42,7 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - download Sentinel-2 data from Copernicus SciHub. Supports download of sub-tiles in the old product format (PDS <14).
 - [**`peps_download`**](https://github.com/olivierhagolle/peps_download)
   -  download data from the French National Mirror (PEPS).
-- [**`Sentinel2ProductIngestor`**](https://github.com/sinergise/Sentinel2ProductIngestor)
+ [**`Sentinel2ProductIngestor`**](https://github.com/sinergise/Sentinel2ProductIngestor)
   - ingest Sentinel-2 data from SciHub into S3. Used by [Sinergise](https://github.com/sinergise) to populate the [AWS Sentinel-2 mirror](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/)
 - [**`sat-download`**](https://github.com/sat-utils/sat-download)
   - download Sentinel-2 data from AWS
