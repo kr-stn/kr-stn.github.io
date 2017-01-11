@@ -13,6 +13,7 @@ Official datahubs and mirrors by the Copernicus partners and [Collaborative Grou
 - [**Copernicus Sentinels Scientific Datahub (SciHub)**](https://scihub.copernicus.eu/)
 - [**Australia National Mirror**](http://www.copernicus.gov.au/)
 - [**Austria National Mirror**](https://data.sentinel.zamg.ac.at/)
+- [**Finnish National Mirror**](https://finhub.nsdc.fmi.fi/)
 - [**French National Mirror (PEPS)**](https://peps.cnes.fr/rocket/)
 - [**German National Mirror (CODE-DE)**](https://code-de.org/)
 - [**Greek National Mirror**](https://sentinels.space.noa.gr/)
@@ -31,7 +32,7 @@ Providers that host Copernicus Sentinel data and allow you to bring your own cod
   - public S3 bucket, Sentinel-2 only, hosted in region eu-central-1 (Frankfurt)
 - [**Google (Sentinel-2)**](https://console.cloud.google.com/storage/browser/gcp-public-data-sentinel-2/?pli=1)
   - public Google Storage bucket, `.SAFE` format, EU region
-
+  
 ## Tools
 Specific to Copernicus Sentinel data discovery, download and processing.
 
@@ -42,27 +43,27 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - download Sentinel-2 data from Copernicus SciHub. Supports download of sub-tiles in the old product format (PDS <14).
 - [**`peps_download`**](https://github.com/olivierhagolle/peps_download)
   -  download data from the French National Mirror (PEPS).
- [**`Sentinel2ProductIngestor`**](https://github.com/sinergise/Sentinel2ProductIngestor)
+- [**`Sentinel2ProductIngestor`**](https://github.com/sinergise/Sentinel2ProductIngestor)
   - ingest Sentinel-2 data from SciHub into S3. Used by [Sinergise](https://github.com/sinergise) to populate the [AWS Sentinel-2 mirror](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/)
 - [**`sat-download`**](https://github.com/sat-utils/sat-download)
   - download Sentinel-2 data from AWS
 - [**`sat-api`**](https://github.com/sat-utils/sat-api)
   - query Sentinel-2 data on AWS using APIGateWay
   - deployed by Development Seed at [https://api.developmentseed.org/satellites](https://api.developmentseed.org/satellites)
-
+  
 ### viewers & browsers
 - [**Sinergise "Sentinel-Hub" (Sentinel-2)**](http://sentinel-hub.com/)
   - visualize AWS Sentinel-2 data in different band combinations. Also offers a WMS/WMTS service.
 - [**RemotePixel "Satellite Search"**](https://remotepixel.ca/projects/satellitesearch.html)
   - [open source](https://github.com/RemotePixel/satellitesearch) viewer for Landsat-8 and Sentinel-2 data hosted by AWS
   - uses [**`sat-api`**](https://github.com/sat-utils/sat-api)
-- [**AWS/Singergise "Sentinel Image Browser"**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/browser.html)
+- [**AWS/Sinergise "Sentinel Image Browser"**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/browser.html)
   - search Sentinel-2 data available on Amazon Webservices
 
 ### processing
 - [**`SNAP` (Sentinel Application Plattform)**](http://step.esa.int/main/toolboxes/snap/)
   - (pre-)process any Sentinel data
 - [**Google Earth Engine**](https://earthengine.google.com/)
-  - process the global Sentinel-1 and Sentinel-2 archives directly on Googles servers
+  - process the global Sentinel-1 and Sentinel-2 archives directly on Google's servers
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
