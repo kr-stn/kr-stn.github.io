@@ -22,6 +22,6 @@ This blog is about Remote Sensing, Python programming, (Spatial) Data Science, G
 
 [Email](mailto:kersten@krstn.eu)
 
-[ResearchGate](https://www.researchgate.net/profile/Kersten_Clauss) [LinkedIn](https://www.linkedin.com/in/kerstenclauss)
+[ResearchGate](https://www.researchgate.net/profile/Kersten_Clauss) &#124; [LinkedIn](https://www.linkedin.com/in/kerstenclauss)
 
-[GitHub](https://github.com/Fernerkundung) [Twitter](https://twitter.com/Fernerkundung) [StackExchange](http://stackexchange.com/users/5185724/kersten)
+[GitHub](https://github.com/Fernerkundung) &#124; [Twitter](https://twitter.com/Fernerkundung) &#124; [StackExchange](http://stackexchange.com/users/5185724/kersten)
