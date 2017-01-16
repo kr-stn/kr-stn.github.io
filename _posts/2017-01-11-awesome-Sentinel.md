@@ -18,12 +18,14 @@ Official datahubs and mirrors by the Copernicus partners and [Collaborative Grou
 - [**German National Mirror (CODE-DE)**](https://code-de.org/)
 - [**Greek National Mirror**](https://sentinels.space.noa.gr/)
 - [**Italian National Mirror**](http://collaborative.mt.asi.it/)
+- [**UK National Mirror (SEDAS)**](http://sedas.satapps.org/)
 
 ### Partial Mirrors
 Innitiatives to integrate specific Sentinel data into existing search and discovery platforms.
 
-- [**USGS EarthExplorer (Sentinel-2)**](https://earthexplorer.usgs.gov/)
 - [**Alaska Satellite Facility (Sentinel-1)**](https://www.asf.alaska.edu/sentinel/)
+- [**Centre for Environmental Data Analysis - CEDA (Sentinel-1, -2)**](http://catalogue.ceda.ac.uk/search/?search_term=sentinel&return_obj=ob&search_obj=ob)
+- [**USGS EarthExplorer (Sentinel-2)**](https://earthexplorer.usgs.gov/)
 
 ### Cloud providers
 Providers that host Copernicus Sentinel data and allow you to bring your own code to process it.
@@ -52,14 +54,19 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - deployed by Development Seed at [https://api.developmentseed.org/satellites](https://api.developmentseed.org/satellites)
   
 ### viewers & browsers
-- [**Sinergise "Sentinel-Hub" (Sentinel-2)**](http://sentinel-hub.com/)
-  - visualize AWS Sentinel-2 data in different band combinations. Also offers a WMS/WMTS service.
+- [**AWS/Sinergise "Sentinel Image Browser"**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/browser.html)
+  - search Sentinel-2 data available on Amazon Webservices
 - [**RemotePixel "Satellite Search"**](https://remotepixel.ca/projects/satellitesearch.html)
   - [open source](https://github.com/RemotePixel/satellitesearch) viewer for Landsat-8 and Sentinel-2 data hosted by AWS
   - uses [**`sat-api`**](https://github.com/sat-utils/sat-api)
-- [**AWS/Sinergise "Sentinel Image Browser"**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/browser.html)
-  - search Sentinel-2 data available on Amazon Webservices
-
+- [**Sinergise "Sentinel Playground"**](http://apps.sentinel-hub.com/sentinel-playground)
+  - visualize AWS Sentinel-2 data in different band combinations ando offers a [WMS/WMTS service](http://www.sentinel-hub.com/apps/wms).
+- [**EOSDA "Land Viewer"**](https://lv.eosda.com/)
+  - viewer for Landsat-8 and Sentinel-2 data hosted by AWS
+- [**jeobrowser "Rocket"**](https://mapshup.com/projects/rocket)
+  - viewer for Sentinel (1,2,3), Landsat-8, SPOT and Pleiades imagery
+  - based on [resto](https://github.com/jjrom/resto) search engine and used as frontend for [PEPS](https://peps.cnes.fr/rocket/)
+  
 ### processing
 - [**`SNAP` (Sentinel Application Plattform)**](http://step.esa.int/main/toolboxes/snap/)
   - (pre-)process any Sentinel data
