@@ -5,6 +5,7 @@ title: Awesome Sentinel
 ---
 The [Copernicus Sentinel satellites](http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus/Overview4) are an amazing opportunity for people all over the world to explore unprecedented amounts of remote sensing data under a free and open license. The [collaborative nature](http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus/Sentinel_Collaborative_Ground_Segment) of the Copernicus programme means that there are multiple ways to get access to Sentinel satellite data and the open license allows anyone to host mirrors of the data. The definitive data access portal for Sentinel data is the [**Copernicus Sentinels Scientific Datahub**](https://scihub.copernicus.eu/) aka. scihub. It contains all Sentinel-1, -2 and -3 data since their respective launches and offers a [graphical search interface](https://scihub.copernicus.eu/dhus) as well as an [API](https://scihub.copernicus.eu/twiki/do/view/SciHubWebPortal/APIHubDescription). It is based on the open-source [data hub software](http://sentineldatahub.github.io/DataHubSystem/), which is also employed by most national mirrors. There are however a wide number of mirrors and tools to get the data and process it. **This post is a curated list of awesome tools, tutorials and APIs related to data from the Copernicus Sentinel Satellites.**
 
+
 ## Data Access
 
 ### Data Hubs and National Mirrors
@@ -71,6 +72,9 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**jeobrowser "Rocket"**](https://mapshup.com/projects/rocket)
   - viewer for Sentinel (1,2,3), Landsat-8, SPOT and Pleiades imagery
   - based on [resto](https://github.com/jjrom/resto) search engine and used as frontend for [PEPS](https://peps.cnes.fr/rocket/)
+- [**EOX "Sentinel-2 cloudless"**](https://s2maps.eu/)
+  - cloudless, [medium brightness](https://eox.at/2017/03/sentinel-2-cloudless/), Sentinel-2 composite covering Europe
+  - also provided as [WMTS Layer](https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml) under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
   
 ### processing
 - [**`SNAP` (Sentinel Application Plattform)**](http://step.esa.int/main/toolboxes/snap/)
