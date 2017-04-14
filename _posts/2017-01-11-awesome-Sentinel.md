@@ -94,4 +94,6 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**Google Earth Engine**](https://earthengine.google.com/)
   - process the global Sentinel-1 and Sentinel-2 archives directly on Google's servers
 
+*last edit: 2017-04-14*
+
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
