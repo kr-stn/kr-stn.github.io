@@ -60,6 +60,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - deployed by Development Seed at [https://api.developmentseed.org/satellites](https://api.developmentseed.org/satellites)
 - [**`awsdownload`**](https://github.com/kraftek/awsdownload)
   - downloader for Sentinel-2 products from Amazon or SciHub
+- [**`sentinelhub`**](https://github.com/sinergise/sentinelhub)
+  - Python library for downloading Sentinel-2 data from Amazon into ESA .SAFE format.
 
 ### viewers & browsers
 - [**AWS/Sinergise "Sentinel Image Browser"**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/browser.html)
@@ -93,7 +95,10 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - also available as [python package](https://github.com/umwilm/SEN2COR)
 - [**Google Earth Engine**](https://earthengine.google.com/)
   - process the global Sentinel-1 and Sentinel-2 archives directly on Google's servers
+- [**`Sen2-Agri`**](https://github.com/Sen2Agri/Sen2Agri-System)
+  - toolbox for processing images for agricultural purposes
+  - consists of independent modules and and [orchestrator](http://www.esa-sen2agri.org/operational-system/system-description/)
 
-*last edit: 2017-06-07*
+*last edit: 2017-07-10*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
