@@ -18,6 +18,7 @@ Official datahubs and mirrors by the Copernicus partners and [Collaborative Grou
 - [**Germany National Mirror (CODE-DE)**](https://code-de.org/)
 - [**Greece National Mirror**](https://sentinels.space.noa.gr/)
 - [**Italy National Mirror**](http://collaborative.mt.asi.it/)
+- [**Norway National Mirror**](https://colhub.met.no/#/home)
 - [**Portugal National Mirror**](https://ipsentinel.ipma.pt/dhus/#/home)
 - [**Sweden National Mirror (SWEA)**](http://swea.rymdstyrelsen.se/portal/)
 - [**United Kingdom National Mirror (SEDAS)**](http://sedas.satapps.org/)
@@ -99,6 +100,6 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - toolbox for processing images for agricultural purposes
   - consists of independent modules and an [orchestrator](http://www.esa-sen2agri.org/operational-system/system-description/)
 
-*last edit: 2017-07-10*
+*last edit: 2017-07-26*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
