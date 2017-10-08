@@ -66,7 +66,7 @@ from sentinelsat import read_geojson, geojson_to_wkt
 
 products = s2_api.query(
     area = geojson_to_wkt(read_geojson('tonle_sap.geojson'))
-    date = ("20151001", "20160201),
+    date = ("20151001", "20160201"),
     platformname = "Sentinel-2",
     cloudcoverpercentage="(0,40)"
 )
