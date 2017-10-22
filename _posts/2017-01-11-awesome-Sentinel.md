@@ -82,9 +82,10 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - [open source](https://github.com/RemotePixel/satellitesearch) viewer for Landsat-8 and Sentinel-2 data hosted by AWS
   - uses [**`sat-api`**](https://github.com/sat-utils/sat-api)
 - [**Sinergise "Sentinel Playground"**](http://apps.sentinel-hub.com/sentinel-playground)
-  - visualize AWS Sentinel-2 data in different band combinations ando offers a [WMS/WMTS service](http://www.sentinel-hub.com/apps/wms).
+  - visualize AWS Sentinel-2 data in different band combinations
+  - offers a [WMS/WMTS service](http://www.sentinel-hub.com/apps/wms).
 - [**Sinergise "EO-browser"**](http://apps.sentinel-hub.com/eo-browser/)
-  - search Sentinel-2, Sentinel-3, Landsat and Proba-V data
+  - search Sentinel-1, 2, 3 and other free satellite data
   - supports pixel based band-math operations and [simple data processing](http://www.sentinel-hub.com/blog/eo-browser-goes-public)
 
 ### Processing
@@ -112,8 +113,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**EOX "Sentinel-2 cloudless"**](https://s2maps.eu/)
   - cloudless, [medium brightness](https://eox.at/2017/03/sentinel-2-cloudless/), [global](https://eox.at/2017/08/sentinel-2-global-cloudless-mosaic) Sentinel-2 composite
   - also provided as [WMTS Layer](https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-  - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on S3 bucket
+  - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
 
-*last edit: 2017-09-27*
+*last edit: 2017-10-22*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
