@@ -80,7 +80,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - viewer for Sentinel-2 and Landsat-8 data with custom metadata filters
 - [**RemotePixel "Satellite Search"**](https://remotepixel.ca/projects/satellitesearch.html)
   - [open source](https://github.com/RemotePixel/satellitesearch) viewer for Landsat-8 and Sentinel-2 data hosted by AWS
-  - uses [**`sat-api`**](https://github.com/sat-utils/sat-api)
+  - supports on-the-fly display and calculation of band combinations
+  - uses [**`remotepixel-api`**](https://github.com/RemotePixel/remotepixel-api) (based on AWS Lambda)
 - [**Sinergise "Sentinel Playground"**](http://apps.sentinel-hub.com/sentinel-playground)
   - visualize AWS Sentinel-2 data in different band combinations
   - offers a [WMS/WMTS service](http://www.sentinel-hub.com/apps/wms).
@@ -115,6 +116,6 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - also provided as [WMTS Layer](https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
   - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
 
-*last edit: 2017-10-22*
+*last edit: 2017-11-27*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
