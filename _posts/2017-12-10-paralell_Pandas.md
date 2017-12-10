@@ -4,7 +4,7 @@ layout: post
 title: Parallel Pandas
 ---
 
-Using pandas performance is usually not an issue when you use the well optimized internal functions. However, sometimes you have to a perform a lot of calculations column wise on a large dataframe. I reently ran into this issue while calculating time series features. I increased the speed of the calculation by chunking the dataframe and using parallel processing with Pythons `multiprocessing` library.
+Using pandas performance is usually not an issue when you use the well optimized internal functions. However, sometimes you have to a perform a lot of calculations column wise on a large dataframe. I recently ran into this issue while calculating time series features. I increased the speed of the calculation 5x by chunking the dataframe and using parallel processing with Pythons `multiprocessing` library.
 
 
 ```python
