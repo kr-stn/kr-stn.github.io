@@ -2,6 +2,7 @@
 published: true
 layout: post
 title: Parallel Pandas
+date: 2017-12-10
 ---
 
 Using pandas performance is usually not an issue when you use the well optimized internal functions. However, sometimes you have to a perform a lot of calculations column wise on a large dataframe. I recently ran into this issue while calculating time series features. I increased the speed of the calculation 5x by chunking the dataframe and using parallel processing with Pythons `multiprocessing` library.
@@ -21,7 +22,7 @@ ts_df = pd.DataFrame(np.random.random(size=(365, 3000)))
 I want to calculate a number of temporal features to be used as input for a regression analysis. These will be calculated for each column. The features themselves are straightforward multi-temporal features such as percentiles, using a lagged time series and some based on Fourier transformation.
 
 
-```python
+{% highlight py %}
 def feature_calculation(df):
     # create DataFrame and populate with stdDev
     result = pd.DataFrame(df.std(axis=0))
@@ -50,7 +51,7 @@ def feature_calculation(df):
     result["fft_angle_max"] = np.max(np.angle(df_fft, deg=True), axis=0)
     
     return result
-```
+{% endhighlight %}
 
 Testing how long the calculation takes for a small test dataset.
 

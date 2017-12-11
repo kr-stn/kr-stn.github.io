@@ -5,7 +5,7 @@ author:      Kersten Clauss
 description: "Remote Sensing, Python, Spatial Data Science."
 baseurl:     ""
 url:         "http://krstn.eu"
-date_format: "%Y-%M-%d"
+date_format: "%Y-%m-%d"
 header_pages:
  - about.md
  #- contact.html
@@ -23,7 +23,7 @@ bing_verification:
 animated:             false
 show_related_posts:   false
 show_post_footers:    false
-show_social_icons:    false
+show_social_icons:    true
 ajaxify_contact_form: false
 enable_mathjax: false
 extended_fonts: false
@@ -54,12 +54,12 @@ facebook_comments_number:
 github_username: Fernerkundung
 reddit_username:
 bitbucket_username:
-stackoverflow_id: users/5185724/kersten
+stackoverflow_id: 5185724
 twitter_username: Fernerkundung
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username:  kerstenclauss
+linkedin_username:
 angellist_username:
 medium_id:
 bitcoin_url:
@@ -118,7 +118,7 @@ text:
 markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    pretty
+permalink:    /:title/
 paginate:     4
 sass:
   style: compressed
