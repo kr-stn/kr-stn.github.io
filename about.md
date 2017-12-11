@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-published: true
+tags: about
 ---
 
 ### Me
@@ -16,7 +16,7 @@ My name is Kersten, I'm a PhD student living in Germany. Apart from technology, 
 This blog is about Remote Sensing, Python programming, (Spatial) Data Science, GIS, and related topics I encounter during the course of my PhD thesis in the field of Remote Sensing.
 
 
-### Contact
+### Contact me via:
 
 [Email](mailto:kersten@krstn.eu)
 
