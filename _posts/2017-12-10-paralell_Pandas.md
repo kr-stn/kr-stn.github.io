@@ -100,3 +100,46 @@ ts_features.equals(ts_features_parallel)
 
 
 Using a simple parallelization routine the time series features are now calculated about 5 times faster - a significant time saving when working with large dataframes.
+
+*Update - 2017-12-11:*
+
+Jonas ([@j08lue](https://twitter.com/j08lue)) pointed out:
+
+> You might save some extra overhead replacing `multiprocessing.Pool` with `concurrent.futures.ProcessPoolExecutor`...
+
+Let's try it but this time using a 10x larger dataset.
+
+```python
+ts_df = pd.DataFrame(np.random.random(size=(365, 30000)))
+```
+
+```python
+%%timeit -n 3 -r 3
+ts_features_parallel = parallel_feature_calculation(ts_df, partitions=100, processes=7)
+```
+    19.6 s ± 618 ms per loop (mean ± std. dev. of 3 runs, 3 loops each)
+
+Define the new function using [`ProcessPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html).
+
+```python
+# using different pool to save overhead
+from concurrent.futures import ProcessPoolExecutor
+
+def parallel_feature_calculation_ppe(df, partitions=10, processes=4):
+    # calculate features in paralell by splitting the dataframe into partitions and using paralell processes
+    
+    df_split = np.array_split(df, partitions, axis=1)  # split dataframe into partitions column wise
+    
+    with ProcessPoolExecutor(processes) as pool:        
+        df = pd.concat(pool.map(feature_calculation, df_split))
+    
+    return df
+```
+
+```python
+%%timeit -n 3 -r 3
+ts_features_parallel_ppe = parallel_feature_calculation_ppe(ts_df, partitions=100, processes=7)
+```
+    18.4 s ± 376 ms per loop (mean ± std. dev. of 3 runs, 3 loops each)
+
+Employing this tip we can indeed save about 6% execution time. Just keep in mind that this requires Python 3.2 or newer.
