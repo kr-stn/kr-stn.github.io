@@ -2,7 +2,7 @@
 title:       KRSTN
 email:       kersten@krstn.eu
 author:      Kersten Clauss
-description: "Remote Sensing, Python, Spatial Data Science."
+description: "Earth Observation, Python, (Spatial) Data Science."
 baseurl:     ""
 url:         "http://krstn.eu"
 date_format: "%Y-%m-%d"

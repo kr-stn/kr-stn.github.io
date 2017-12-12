@@ -53,7 +53,7 @@ cd /data/China/slope_relief/
 gdaldem slope -s 111120 -compute_edges hanzhong-dem.tif hanzhong-slope.tif
 ```
 
-# Coloring
+## Coloring
 
 In a last step we want to color our results. `gdaldem color-relief` is usually used to color DEMs in green, brown and yellow. We will use it to color our slopes from white (0 degrees) to black (90 degrees).
 
