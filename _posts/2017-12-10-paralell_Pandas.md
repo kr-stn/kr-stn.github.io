@@ -101,6 +101,8 @@ ts_features.equals(ts_features_parallel)
 
 Using a simple parallelization routine the time series features are now calculated about 5 times faster - a significant time saving when working with large dataframes.
 
+---
+
 *Update - 2017-12-11:*
 
 Jonas ([@j08lue](https://twitter.com/j08lue)) pointed out:
