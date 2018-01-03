@@ -52,3 +52,11 @@ which gives us
 $$1-(1-\frac{0.25}{10380000})^{30602} = 0.000737$$
 
 The probability of being hit on the head be a falling rocket in Berlin-Kreuzberg is 0.000737 or circa 0.07 percent.
+
+## Aftermath
+
+For those of you wondering what damage one of those puny little sticks can do. Turns out - quite a lot actually.
+
+![Rocket Girl 1]({{ site.baseurl }}/rocket-girl-1.jpg)
+
+![Rocket Girl 2]({{ site.baseurl }}/rocket-girl-2.jpg)
