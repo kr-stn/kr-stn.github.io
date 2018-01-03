@@ -57,6 +57,6 @@ The probability of being hit on the head be a falling rocket in Berlin-Kreuzberg
 
 For those of you wondering what damage one of those puny little sticks can do. Turns out - quite a lot actually.
 
-![Rocket Girl 1]({{ site.baseurl }}/rocket-girl-1.jpg)
+![Rocket Girl 1]({{ site.baseurl }}/media/rocket-girl-1.jpg)
 
-![Rocket Girl 2]({{ site.baseurl }}/rocket-girl-2.jpg)
+![Rocket Girl 2]({{ site.baseurl }}/media/rocket-girl-2.jpg)
