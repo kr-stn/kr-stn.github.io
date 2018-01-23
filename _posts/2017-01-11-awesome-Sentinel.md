@@ -72,6 +72,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - Python library for downloading Sentinel-2 data from Amazon into ESA .SAFE format.
 - [**`aws-sat-api`**](https://github.com/RemotePixel/aws-sat-api)
   - Simple Serverless API for satellite data hosted on AWS Public Dataset
+- [**`sentinel2_aws`**](https://github.com/beaorn/sentinel2_aws)
+  - Ruby gem for parsing Sentinel-2 metadata from AWS
 
 ### Viewers & Browsers
 - [**AWS/Sinergise "Sentinel Image Browser"**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/browser.html)
@@ -94,7 +96,7 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**Sinergise "Sentinel Playground"**](http://apps.sentinel-hub.com/sentinel-playground)
   - visualize AWS Sentinel-2 data in different band combinations
   - offers a [WMS/WMTS service](http://www.sentinel-hub.com/apps/wms).
-- [**Sinergise "EO-browser"**](http://apps.sentinel-hub.com/eo-browser/)
+- [**Sinergise "Sentinel-Hub"**](https://www.sentinel-hub.com/)
   - search Sentinel-1, 2, 3 and other free satellite data
   - supports pixel based band-math operations and [simple data processing](http://www.sentinel-hub.com/blog/eo-browser-goes-public)
 
@@ -116,15 +118,19 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**`Sen2-Agri`**](https://github.com/Sen2Agri/Sen2Agri-System)
   - toolbox for processing images for agricultural purposes
   - includes modules for atmospheric correction, monthly syntheses, biophysical variables, crop mask, crop-type classification and an [orchestrator](http://www.esa-sen2agri.org/operational-system/system-description/)
-  
+- [**`sentinel2-cloud-detector`**](https://github.com/sentinel-hub/sentinel2-cloud-detector)
+  - single scene, pixel-based cloud detection algorithm used at [Sentinel-Hub](https://www.sentinel-hub.com/)
+  - [accompanying write-up](https://medium.com/sentinel-hub/improving-cloud-detection-with-machine-learning-c09dc5d7cf13) with performance comparison to other cloud detection algorithms
+
  ## Products
  Products, datasets and applications generated from Copernicus Sentinel data.
- 
+
 - [**EOX "Sentinel-2 cloudless"**](https://s2maps.eu/)
   - cloudless, [medium brightness](https://eox.at/2017/03/sentinel-2-cloudless/), [global](https://eox.at/2017/08/sentinel-2-global-cloudless-mosaic) Sentinel-2 composite
   - also provided as [WMTS Layer](https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
   - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
+
   
-*last edit: 2017-12-15*
+*last edit: 2018-01-23*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
