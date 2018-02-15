@@ -99,6 +99,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**Sinergise "Sentinel-Hub"**](https://www.sentinel-hub.com/)
   - search Sentinel-1, 2, 3 and other free satellite data
   - supports pixel based band-math operations and [simple data processing](http://www.sentinel-hub.com/blog/eo-browser-goes-public)
+- [**SnapPlanet**](https://snapplanet.io/)
+  - [Android](https://play.google.com/store/apps/details?id=io.snapplanet.app) / [iOS](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1175935057) App to to view Sentinel-2 images, compare changes and share
 
 ### Processing
 - [**`SNAP` (Sentinel Application Plattform)**](http://step.esa.int/main/toolboxes/snap/)
@@ -131,6 +133,6 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
 
   
-*last edit: 2018-01-23*
+*last edit: 2018-02-15*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
