@@ -15,7 +15,7 @@ The [Copernicus Sentinel satellites](http://www.esa.int/Our_Activities/Observing
 Official datahubs and mirrors by the Copernicus partners and [Collaborative Ground Segment members](https://sentinels.copernicus.eu/web/sentinel/missions/collaborative/national-points-of-contact).
 
 - [**Copernicus Open Access Hub (SciHub)**](https://scihub.copernicus.eu/)
-- [**Australia National Mirror**](http://www.copernicus.gov.au/)
+- [**Australia National Mirror**](https://copernicus.nci.org.au/)
 - [**Austria National Mirror**](https://data.sentinel.zamg.ac.at/)
 - [**Finland National Mirror**](https://finhub.nsdc.fmi.fi/)
 - [**France National Mirror (PEPS)**](https://peps.cnes.fr/rocket/)
@@ -40,10 +40,12 @@ Innitiatives to integrate specific Sentinel data into existing search and discov
   - 14 day rolling archive of Sentinel-3 L1 and L2 marine products in near real-time (NRT), short time critical (STC) and non time critical (NTC) latency mode
 
 ### Cloud Providers
-Providers that host Copernicus Sentinel data and allow you to bring your own code to process it.
+Providers that host Copernicus Sentinel data and allow you to bring your own code to process it without the need to download the data.
 
-- [**Amazon Web Services (Sentinel-2)**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/)
-  - public S3 bucket, Sentinel-2 only, hosted in region eu-central-1 (Frankfurt)
+- [**Amazon Web Services**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/)
+  - Sentinel-2 L1C and L2A, Sentinel-1, hosted in region eu-central-1 (Frankfurt), requester-pays S3 buckets
+- [**EODIAS**](https://eodias.eu/)
+  - full Sentinel archive, free visualization and download through [data discovery portal](http://finder.eodias.eu/www/) and [EO Browser](http://eobrowser.eodias.eu) 
 - [**Google (Sentinel-2)**](https://cloud.google.com/storage/docs/public-datasets/sentinel-2)
   - public [Google Cloud Storage bucket](https://console.cloud.google.com/storage/browser/gcp-public-data-sentinel-2/?pli=1), `.SAFE` format, EU region
 - [**Planet**](https://www.planet.com/pulse/sentinel-2-and-landsat-8-data-now-available-on-the-planet-platform/)
@@ -72,6 +74,9 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - Python library for downloading Sentinel-2 data from Amazon into ESA .SAFE format and interface [Sentinel Hub OGC services](https://www.sentinel-hub.com/develop/capabilities/wms)
 - [**`aws-sat-api`**](https://github.com/RemotePixel/aws-sat-api)
   - Simple Serverless API for satellite data hosted on AWS Public Dataset
+- [**`sentinel2-search-api`**](https://github.com/beaorn/sentinel2-search-api)
+  - query Sentinel-2 data hosted on AWS by MGRS tile
+  - API deployed at [https://sentinel2.satgateway.com](https://sentinel2.satgateway.com), tile preview front-end deployed at [https://s2viewer.satgateway.com](https://s2viewer.satgateway.com)
 - [**`sentinel2_aws`**](https://github.com/beaorn/sentinel2_aws)
   - Ruby gem for parsing Sentinel-2 metadata from AWS
 
@@ -107,6 +112,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - supports pixel based band-math operations and [simple data processing](http://www.sentinel-hub.com/blog/eo-browser-goes-public)
 - [**SnapPlanet**](https://snapplanet.io/)
   - [Android](https://play.google.com/store/apps/details?id=io.snapplanet.app) / [iOS](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1175935057) App to to view Sentinel-2 images, compare changes and share
+- [**Spectator**](https://spectator.earth/)
+  - real-time tracking of EO satellites, set-up custom channels to track ROI overpass and preview images
 - [**Thematic Exploitation Platforms "TEPs"**](https://tep.eo.esa.int/)
   - platforms for finding and processing (Sentinel) data relating to a thematic topic
   - available platforms: [Coastal](https://coastal-tep.eo.esa.int/portal), [Forestry](https://forestry-tep.eo.esa.int/), [Geohazards](https://geohazards-tep.eo.esa.int/), [Hydrology](https://hydrology-tep.eo.esa.int/), [Polar](https://polar-tep.eo.esa.int/), [Urban](https://urban-tep.eo.esa.int/#!), [Food Security](https://foodsecurity-tep.eo.esa.int/)
@@ -145,6 +152,6 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
 
   
-*last edit: 2018-03-08*
+*last edit: 2018-05-15*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
