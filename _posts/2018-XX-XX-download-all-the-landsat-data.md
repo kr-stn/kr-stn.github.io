@@ -2,7 +2,7 @@
 published: false
 layout: post
 title: Download all the Landsat data
-date: 2018-04-29
+date: 2018-XX-XX
 ---
 
 - recent news indicate, that Landsat data might not be freely distributed in the future: https://www.nature.com/articles/d41586-018-04874-y
