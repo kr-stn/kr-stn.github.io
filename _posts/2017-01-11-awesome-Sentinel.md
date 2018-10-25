@@ -131,6 +131,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - atmospheric correction of Sentinel-2 data
 - [**Google Earth Engine**](https://earthengine.google.com/)
   - process the global Sentinel archives directly on Google's servers
+- [**EOS Processing**](https://processing.eos.com/)
+  - workflow library for thematic processing of (Sentinel-2) satellite data
 - [**`iCOR`**](https://blog.vito.be/remotesensing/icor_available)
   - atmospheric correction of Sentinel-2 data
   - available as `SNAP` plugin
@@ -154,9 +156,7 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - cloudless, [medium brightness](https://eox.at/2017/03/sentinel-2-cloudless/), [global](https://eox.at/2017/08/sentinel-2-global-cloudless-mosaic) Sentinel-2 composite
   - also provided as [WMTS Layer](https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
   - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
-
-
   
-*last edit: 2018-07-23*
+*last edit: 2018-07-25*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
