@@ -152,6 +152,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**`Sen2Cor`**](http://step.esa.int/main/third-party-plugins-2/sen2cor/)
   - atmospheric correction of Sentinel-2 data
   - basis for [L2A](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm) data published on Copernicus Open Access Hub
+- [**`sen2r`**](https://github.com/ranghetti/sen2r)
+  - R toolbox to search, download and pre-process Sentinel-2 data
 
 ## Products
 Products, datasets and applications generated from Copernicus Sentinel data.
@@ -161,6 +163,6 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - also provided as [WMTS Layer](https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
   - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
   
-*last edit: 2018-11-14*
+*last edit: 2019-01-27*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
