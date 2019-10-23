@@ -163,6 +163,6 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - also provided as [WMTS Layer](https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
   - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
   
-*last edit: 2019-01-27*
+*last edit: 2019-10-23*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
