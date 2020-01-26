@@ -7,7 +7,7 @@ summary: A curated list of awesome tools, tutorials and APIs related to the Cope
 ---
 The [Copernicus Sentinel satellites](http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus/Overview4) are an amazing opportunity for people all over the world to explore unprecedented amounts of remote sensing data under a free and open license. The [collaborative nature](http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus/Sentinel_Collaborative_Ground_Segment) of the Copernicus programme means that there are multiple ways to get access to Sentinel satellite data and the open license allows anyone to host mirrors of the data. The definitive data access portal for Sentinel data is the [**Copernicus Open Access Hub**](https://scihub.copernicus.eu/) aka. SciHub. It contains all Sentinel-1, -2 and -3 data since their respective launches and offers a [graphical search interface](https://scihub.copernicus.eu/dhus) as well as an [API](https://scihub.copernicus.eu/twiki/do/view/SciHubWebPortal/APIHubDescription). It is based on the open-source [data hub software](http://sentineldatahub.github.io/DataHubSystem/), which is also employed by most national mirrors. There are however a wide number of mirrors and tools to get the data and process it. **This post is a curated list of awesome tools, tutorials and APIs related to the Copernicus Sentinel Satellites.**
 
-![Copernicus logo](http://emergency.copernicus.eu/mapping/sites/all/themes/gmes960/images/Copernicus_fb.png)
+![Copernicus logo](https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/08/copernicus_logo/12986716-3-eng-GB/Copernicus_logo.jpg)
 
 ## Data Access
 
@@ -22,6 +22,7 @@ Official datahubs and mirrors by the Copernicus partners and [Collaborative Grou
 - [**Germany National Mirror (CODE-DE)**](https://code-de.org/)
 - [**Greece National Mirror**](https://sentinels.space.noa.gr/)
 - [**Italy National Mirror**](http://collaborative.mt.asi.it/)
+- [**Luxembourg National Mirror**](https://www.collgs.lu/)
 - [**Norway National Mirror**](https://colhub.met.no/#/home)
 - [**Portugal National Mirror**](https://ipsentinel.ipma.pt/dhus/#/home)
 - [**Sweden National Mirror (SWEA)**](http://swea.rymdstyrelsen.se/portal/)
@@ -154,6 +155,11 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - basis for [L2A](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm) data published on Copernicus Open Access Hub
 - [**`sen2r`**](https://github.com/ranghetti/sen2r)
   - R toolbox to search, download and pre-process Sentinel-2 data
+- [**`ACOLITE`**](https://github.com/acolite/acolite)
+  - atmospheric correction algorithms for aquatic applications of Landsat and Sentinel-2
+- [**`C2RCC`**](https://github.com/bcdev/s3tbx-c2rcc)
+  - atmospheric correction of Sentinel-3 and -2 for coast colour applications
+  - included in the `SNAP` toolbox for Sentinel-3
 
 ## Products
 Products, datasets and applications generated from Copernicus Sentinel data.
@@ -163,6 +169,6 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - also provided as [WMTS Layer](https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
   - [original GeoTIFF tiles](https://eox.at/2017/03/sentinel-2-cloudless-original-tiles-available/) provided on AWS S3 bucket
   
-*last edit: 2019-10-23*
+*last edit: 2020-01-26*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
