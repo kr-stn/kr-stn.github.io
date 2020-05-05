@@ -98,6 +98,8 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - API deployed at [https://sentinel2.satgateway.com](https://sentinel2.satgateway.com), tile preview front-end deployed at [https://s2viewer.satgateway.com](https://s2viewer.satgateway.com)
 - [**`sentinel2_aws`**](https://github.com/beaorn/sentinel2_aws)
   - Ruby gem for parsing Sentinel-2 metadata from AWS
+- [**`eodag`**](https://github.com/CS-SI/eodag)
+  - command line tool and plugin-oriented Python framework for search and download from [multiple providers](https://eodag.readthedocs.io/en/latest/intro.html#available-providers) including all DIAS
 
 ### Viewers & Portals
 - [**AWS/Sinergise "Sentinel Image Browser"**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/browser.html)
@@ -141,7 +143,7 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**ESRI Sentinel-2 Explorer**](https://sentinel2explorer.esri.com/)
     - view Sentinel-2 data rendered with a [number of indexes](https://www.arcgis.com/home/group.html?id=658741129719420f83d503a3ba743def#overview)
     - available as [ArcGIS ImageServer (REST)](https://sentinel.arcgis.com/arcgis/rest/services/Sentinel2/ImageServer)
-  
+
 ### Processing
 - [**`SNAP` (Sentinel Application Plattform)**](http://step.esa.int/main/toolboxes/snap/)
   - (pre-)process any Sentinel data
@@ -187,6 +189,6 @@ Products, datasets and applications generated from Copernicus Sentinel data.
 - [**S2GLC Land Cover Map of Europe 2017**](http://s2glc.cbk.waw.pl/extension)
   - tiles in MGRS (Sentinel-2) available at [CREODIAS Finder](https://finder.creodias.eu/) (collection: S2GLC)
   
-*last edit: 2020-04-18*
+*last edit: 2020-05-05*
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
