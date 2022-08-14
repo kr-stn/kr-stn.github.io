@@ -17,19 +17,18 @@ Official datahubs and mirrors by the Copernicus partners and [Collaborative Grou
 - [**Copernicus Open Access Hub (SciHub)**](https://scihub.copernicus.eu/)
 - [**Australia National Mirror**](https://copernicus.nci.org.au/)
 - [**Austria National Mirror**](https://data.sentinel.zamg.ac.at/)
+- [**Czech Rebublic National Mirror**](https://dhr1.cesnet.cz/#/home)
 - [**Finland National Mirror**](https://finhub.nsdc.fmi.fi/)
 - [**France National Mirror (PEPS)**](https://peps.cnes.fr/rocket/)
 - [**Germany National Mirror (CODE-DE)**](https://code-de.org/)
 - [**Greece National Mirror**](https://sentinels.space.noa.gr/)
-- [**Italy National Mirror**](http://collaborative.mt.asi.it/)
 - [**Luxembourg National Mirror**](https://www.collgs.lu/)
 - [**Norway National Mirror**](https://colhub.met.no/#/home)
 - [**Portugal National Mirror**](https://ipsentinel.ipma.pt/dhus/#/home)
-- [**Sweden National Mirror (SWEA)**](http://swea.rymdstyrelsen.se/portal/)
 - [**United Kingdom National Mirror (SEDAS)**](http://sedas.satapps.org/)
 
 ### Partial Mirrors
-Innitiatives to integrate specific Sentinel data into existing search and discovery platforms.
+Initiatives to integrate specific Sentinel data into existing search and discovery platforms.
 
 - [**Alaska Satellite Facility (Sentinel-1)**](https://www.asf.alaska.edu/sentinel/)
 - [**Centre for Environmental Data Analysis - CEDA (Sentinel-1, -2)**](http://catalogue.ceda.ac.uk/search/?search_term=sentinel&return_obj=ob&search_obj=ob)
@@ -49,10 +48,14 @@ Innitiatives to integrate specific Sentinel data into existing search and discov
 ### Cloud Providers
 Providers that host Copernicus Sentinel data and allow you to bring your own code to process it without the need to download the data.
 
-- [**Amazon Web Services**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/)
-  - Sentinel-2 L1C and L2A, Sentinel-1, hosted in region eu-central-1 (Frankfurt), requester-pays S3 buckets
+- [**Open data on AWS**](https://registry.opendata.aws/tag/satellite-imagery/)
+  - [Sentinel-2 L1C and L2A](https://registry.opendata.aws/sentinel-2/) hosted in region `eu-central-1` (Frankfurt), requester-pays S3 buckets
   - [Sentinel-2 L2A Cloud-Optimized GeoTIFFs](https://registry.opendata.aws/sentinel-2-l2a-cogs/), hosted in region `us-west-2` (Oregon), S3 buckets
-  - [STAC Browser](https://sentinel.stac.cloud/?t=catalogs) for Sentinel-2 COG hosted on AWS
+    - [STAC Browser](https://sentinel.stac.cloud/?t=catalogs) for Sentinel-2 COG hosted on AWS
+  - [Sentinel-1 GRD](https://registry.opendata.aws/sentinel-1/) hosted in region `eu-central-1` (Frankfurt), requester-pays S3 buckets
+  - [Sentinel-1 ARD CONUS](https://registry.opendata.aws/sentinel-1-rtc-indigo/) - analysis ready dataset of Sentinel-1, tiled COGs, for contiguous United States
+  - [Sentinel-3 NRT, STC, NTC, COG](https://registry.opendata.aws/sentinel-3/) - all Sentinel-3 products for near-real time, short time critical and not time critical, all products also available converted to COGs
+  - [Sentinel-5P L2](https://registry.opendata.aws/sentinel5p/) -  all Level-2 products from Sentinel-5P, also available as COG converted data
 - [**Google (Sentinel-2)**](https://cloud.google.com/storage/docs/public-datasets/sentinel-2)
   - public [Google Cloud Storage bucket](https://console.cloud.google.com/storage/browser/gcp-public-data-sentinel-2/?pli=1), `.SAFE` format, EU region
 - [**Planet**](https://www.planet.com/pulse/sentinel-2-and-landsat-8-data-now-available-on-the-planet-platform/)
@@ -101,7 +104,9 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**`sentinel2_aws`**](https://github.com/beaorn/sentinel2_aws)
   - Ruby gem for parsing Sentinel-2 metadata from AWS
 - [**`eodag`**](https://github.com/CS-SI/eodag)
-  - command line tool and plugin-oriented Python framework for search and download from [multiple providers](https://eodag.readthedocs.io/en/latest/intro.html#available-providers) including all DIAS
+  - command line tool and plugin-oriented Python framework for search and download from [multiple providers](https://eodag.readthedocs.io/en/stable/getting_started_guide/providers.html) including all DIAS
+- [**`sentinelloader`**](https://github.com/flaviostutz/sentinelloader)
+  - Sentinel-2 satellite tiles images downloader from Copernicus. Minimizes data download and combines multiple tiles to return a single area of interest
 
 ### Viewers & Portals
 - [**AWS/Sinergise "Sentinel Image Browser"**](http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/browser.html)
@@ -112,7 +117,7 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 - [**jeobrowser "Rocket"**](https://mapshup.com/projects/rocket)
   - viewer for Sentinel (1,2,3), Landsat-8, SPOT and Pleiades imagery
   - based on [resto](https://github.com/jjrom/resto) search engine and used as frontend for [PEPS](https://peps.cnes.fr/rocket/)
-- [**mundialis "EO-me"**](http://eome.mundialis.de/eome/client/index.html)
+- [**mundialis "EO-me"**](https://www.mundialis.de/en/earth-observation-metadata-enhancer/)
   - viewer for Sentinel-2 and Landsat-8 data with custom metadata filters
   - satellite tiles enriched with additional metadata (e.g. terrain statistics, NDVI at overpass, climatic parameters, population count)
 - [**OceanDataLab**](https://www.oceandatalab.com)
@@ -182,7 +187,11 @@ Specific to Copernicus Sentinel data discovery, download and processing.
   - GRASS GIS addon for atmospheric correction of Sentinel-2 including cloud and shadow detection
 - [**`sat-stac-sentinel`**](https://github.com/sat-utils/sat-stac-sentinel)
   - convert original Sentinel-1 and -2 metadata into [STAC](https://stacspec.org/) items
-
+- [**`EOReader`**](https://github.com/sertit/eoreader)
+  - Opensource Python library reading Sentinel-1, 2, 3, and other optical and SAR sensors - loading and stacking bands in a sensor-agnostic way
+- [**`xsar`**](https://github.com/umr-lops/xsar)
+  -  read Sentinel-1 data into xarray for further processing
+ 
 ## Products
 Products, datasets and applications generated from Copernicus Sentinel data.
 
@@ -194,6 +203,7 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - tiles in MGRS (Sentinel-2) available at [CREODIAS Finder](https://finder.creodias.eu/) (collection: S2GLC)
 
   
-*last edit: 2020-10-11*
+*last edit: 2022-08-14 - [changelog](https://github.com/Fernerkundung/awesome-sentinel/commits/main)*
+
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
