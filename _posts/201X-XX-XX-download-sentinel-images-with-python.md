@@ -22,7 +22,7 @@ There are only three steps necessary before you can start downloading Sentinel d
 3. Create a GeoJSON or WKT polygonof your area of interest.
 
 In this example we are using a GeoJSON polygon for Germany.
-<script src="https://embed.github.com/view/geojson/fernerkundung/fernerkundung.github.io/master/media/Deutschland.geojson"></script>
+<script src="https://embed.github.com/view/geojson/kr-stn/kr-stn.github.io/master/media/Deutschland.geojson"></script>
 
 ## Set-up imports and API endpoint
 

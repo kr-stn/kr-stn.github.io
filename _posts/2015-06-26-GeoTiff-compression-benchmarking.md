@@ -30,7 +30,7 @@ dstImg = driver.Create(dstName, srcImg.RasterXSize, srcImg.RasterYSize, 1, gdal.
 
 Not sure which algorithm will be the best for your data? Neither was I. I therefore wrote a small script that compares all of them to each other in regards to file size, write time and read time. This enables you to select the compression that best suits your data.
 
-**[GeoTiff compression benchmark script](https://gist.githubusercontent.com/Fernerkundung/cc3b7f77ec4534754aba/raw/f230d0b86237eff21fc379265b24ce8f5f629c55/GTiff_compression_benchmark.py)**
+**[GeoTiff compression benchmark script](https://gist.githubusercontent.com/kr-stn/cc3b7f77ec4534754aba/raw/f230d0b86237eff21fc379265b24ce8f5f629c55/GTiff_compression_benchmark.py)**
 
 Just run it with a GeoTiff of your choice and compare the results:
 

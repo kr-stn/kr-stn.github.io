@@ -20,6 +20,6 @@ This blog is about Earth Observation, Python programming, (Spatial) Data Science
 
 [Email](mailto:kersten@krstn.eu)
 
-[LinkedIn](https://www.linkedin.com/in/kerstenclauss) &#124; [GitHub](https://github.com/Fernerkundung)
+[LinkedIn](https://www.linkedin.com/in/kerstenclauss) &#124; [GitHub](https://github.com/kr-stn)
 
- [Twitter](https://twitter.com/Fernerkundung) &#124; [StackExchange](http://stackexchange.com/users/5185724/kersten) &#124; [ResearchGate](https://www.researchgate.net/profile/Kersten_Clauss)
+ [Twitter](https://twitter.com/ker_sten) &#124; [StackExchange](http://stackexchange.com/users/5185724/kersten) &#124; [ResearchGate](https://www.researchgate.net/profile/Kersten_Clauss)

@@ -8,7 +8,7 @@ Trees cover a large part of the earth and can sometimes be quite annoying when y
 
 For this global tree cover (change) map Hansen et al. processed the Landsat data archive to generate a 30m dataset. This feat was made possible by Google providing their EarthEngine platform to cope with such a colossal amount of data processing. They also host the raster dataset (in tiles) and provide access to the vector data through EarthEngine. Unfortunately there is no way to export the global dataset as a whole. To generate a global dataset you need to download the raster data for every tile, resample it to your needs and then polygonize it to create a vector dataset. Luckily the only thing you need for that is a python script, the GDAL/OGR tools and a bit of time (about 4 days in my case).
 
-Here's the script: [Global_tree_cover_vector_from_Hansen.py](https://gist.github.com/Fernerkundung/43ba82517327669f0f3e)
+Here's the script: [Global_tree_cover_vector_from_Hansen.py](https://gist.github.com/kr-stn/43ba82517327669f0f3e)
 
 And here's what it does:
 

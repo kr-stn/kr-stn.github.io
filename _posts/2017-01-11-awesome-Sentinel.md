@@ -203,7 +203,7 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - tiles in MGRS (Sentinel-2) available at [CREODIAS Finder](https://finder.creodias.eu/) (collection: S2GLC)
 
   
-*last edit: 2022-08-14 - [changelog](https://github.com/Fernerkundung/awesome-sentinel/commits/main)*
+*last edit: 2022-08-14 - [changelog](https://github.com/kr-stn/awesome-sentinel/commits/main)*
 
 
-Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/Fernerkundung) or open a pull request on [Github](https://github.com/Fernerkundung/awesome-sentinel/).
+Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/ker_sten) or open a pull request on [Github](https://github.com/kr-stn/awesome-sentinel/).

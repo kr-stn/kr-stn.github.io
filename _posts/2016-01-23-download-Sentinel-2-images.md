@@ -15,7 +15,7 @@ Once you've taken care of 1 and 2 head over to [Geojson.io](http://geojson.io/) 
 
 Here is what I am looking at today - the surroundings of Lake Tonle Sap in Cambodia, a region rich in rice agriculture. Just draw a polygon around your search area and save it as Geojson.
 
-<script src="https://embed.github.com/view/geojson/fernerkundung/fernerkundung.github.io/master/media/tonle_sap.geojson"></script>
+<script src="https://embed.github.com/view/geojson/kr-stn/kr-stn.github.io/master/media/tonle_sap.geojson"></script>
 
 ### Command Line
 
@@ -36,7 +36,7 @@ Explaining the parts of this command.
 
 You can use the  `--footprints` flag to create a GeoJSON `search_footprints.geojson` showing you which scenes fulfilled your search criteria, their respective download links and more metadata. This is a good starting point to get an overview of the available data.
 
-<script src="https://embed.github.com/view/geojson/fernerkundung/fernerkundung.github.io/master/media/search_footprints_tonle_sap.geojson"></script>
+<script src="https://embed.github.com/view/geojson/kr-stn/kr-stn.github.io/master/media/search_footprints_tonle_sap.geojson"></script>
 
 To download all the scenes simply add the option `-d` and make sure you have enough diskspace, as most scenes from that time are 5-7Gb each. It is also a good idea to use the provided MD5 checksum and verify the integrity of the downloaded files with the `--md5` flag.
 
