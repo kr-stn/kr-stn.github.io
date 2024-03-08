@@ -14,7 +14,7 @@ The [Copernicus Sentinel satellites](http://www.esa.int/Our_Activities/Observing
 ### Data Hubs and National Mirrors
 Official datahubs and mirrors by the Copernicus partners and [Collaborative Ground Segment members](https://sentinels.copernicus.eu/web/sentinel/missions/collaborative/national-points-of-contact).
 
-- [**Copernicus Open Access Hub (SciHub)**](https://scihub.copernicus.eu/)
+- [**Copernicus Data Spaces Ecosystem (CDSE)**](https://dataspace.copernicus.eu/)
 - [**Australia National Mirror**](https://copernicus.nci.org.au/)
 - [**Austria National Mirror**](https://data.sentinel.zamg.ac.at/)
 - [**Czech Rebublic National Mirror**](https://dhr1.cesnet.cz/#/home)
@@ -80,7 +80,7 @@ Specific to Copernicus Sentinel data discovery, download and processing.
 
 ### Search & Download
 - [**`sentinelsat`**](https://github.com/sentinelsat/sentinelsat)
-  - search and download from any Datahub. Comes with an intuitive command line and a flexible Python API.
+  - search and download from any [DHuS](https://github.com/SentinelDataHub/)-powered Datahub. Comes with an intuitive command line and a flexible Python API.
 - [**`Sentinel-download`**](https://github.com/olivierhagolle/Sentinel-download)
   - download Sentinel-2 data from Copernicus SciHub. Supports download of sub-tiles in the old product format (PDS <14).
 - [**`peps_download`**](https://github.com/olivierhagolle/peps_download)
@@ -203,7 +203,7 @@ Products, datasets and applications generated from Copernicus Sentinel data.
   - tiles in MGRS (Sentinel-2) available at [CREODIAS Finder](https://finder.creodias.eu/) (collection: S2GLC)
 
   
-*last edit: 2022-08-14 - [changelog](https://github.com/kr-stn/awesome-sentinel/commits/main)*
+*last edit: 2024-03-08 - [changelog](https://github.com/kr-stn/awesome-sentinel/commits/main)*
 
 
 Know another awesome API, mirror or app that is missing from this list? Send it to me via [Email](mailto:kersten@krstn.eu), [Twitter](https://twitter.com/ker_sten) or open a pull request on [Github](https://github.com/kr-stn/awesome-sentinel/).
