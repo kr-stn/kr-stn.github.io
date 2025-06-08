@@ -20,13 +20,21 @@ First note of AI help - coming up with a name that references Strava KOMs, that 
 
 To track my own learning process and how the prototype progressed I am keeping the complete prompt history here. The AI and human changes will be tracked as separate git commits in the KOMrade repo. I am (still) fairly handy with Python and know my way around some Javascript - for the rest we are going to use the current set of AI coding assistants and see what prototype we can come up with.
 
-1.
+1. The initial application prompt
+
 > I want to build a new browser based application to filter and analyze Strava KOM segments.
 >
 > Don't write any code yet! Create a plan and an outline of how you want to build this application for me to review.
 >
-> I should be able to maintain the codebase - I am an experienced Python programmer that knows some Javascript.
+> I should be able to maintain the codebase - I am an experienced Python programmer that knows some Javascript. If the application is purely in Javascript it should be using modern, easy to learn concepts and frameworks.
 >
-> The application should follow modern web standards and run fully inside the browser locally, without a separate backend. Provide options how that can be achieved - for instance as a PWA, with WASM or other solutions I don't know.
+> The application should follow modern web standards and run fully inside the browser locally, without a separate backend.
 >
 > The workflow of the application is as follows. The user provides a region of interest on a map or as an adress to search for KOMs within a user defined radius. The application then queries the public Strava API or parses the data from the published KOM websites the user can later filter over. The user then filters over the list of available KOMs, with the most interesting categories being length of the segment, elevation, speed, duration, known power of the fastest attempt and number of attempts or people who have ridden that segment. The step of creating a list of available Strava KOMs might take very long so we want to be able to export those results for offline storage and be able to later import them from a local file to speed this step up. In a next step the user can filter over these categories and is presented a list of the filtered segments that are also displayed on a map. Clicking on the segment on the map or in the filtered list should take me to the Strava site of the segment itself.
+>
+> I know the public Strava API is limited in its scope for what it provides for the KOM segment data. We should aim to use the API minimally - for instance searching by location to get the segment IDs and then parsing the leaderboard and segment data from the public KOM segment pages. This can take multiple minutes or even hours, where the duration and query state should be visible to the user. The results need to be able to be exported after getting them to local storage and the user needs to be able to skip the search and parsing step by re-importing that data.
+- since the project plan and outline look reasonable for a JS novice I ask it to start creating the intial code by removen "Don't write any code yet!" and replacing it with "Create a plan and an outline of how you want to build this application and then start building it."
+
+2. Get some help to get it to run locally.
+> Add required files and configurations so I can run this application locally using containers or DevContainer. I am on a Windows machine and have WSL2 Linux and Docker available as tools.
+- at this point the devcontainers are not launching as expected and a gitignore file is missing, which I had to add manually
